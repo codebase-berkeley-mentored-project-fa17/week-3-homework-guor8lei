@@ -15,8 +15,8 @@ def index(request):
 def about(request):
     #################################
     # Question 1
-    # REPLACE THE LINE WITH YOUR CODE
-    return HttpResponse("No about page :(")
+    posts = Post.objects.order_by("-pub_date")
+    return render(request, "posts/about.html")
 
 def post_details(request, pk):
     #################################
