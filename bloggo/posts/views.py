@@ -15,7 +15,6 @@ def index(request):
 def about(request):
     #################################
     # Question 1
-    posts = Post.objects.order_by("-pub_date")
     return render(request, "posts/about.html")
 
 def post_details(request, pk):
